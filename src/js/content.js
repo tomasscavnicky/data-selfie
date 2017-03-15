@@ -118,7 +118,11 @@ var helper = require("./content_helpers.js"),
 window.onload = function() {
     console.log("\n\n\n\n\nKabooom. Content script loaded.");
     looked.getMinLookedDuration();
-    window.global.profileInfo = $("#pagelet_bluebar a[data-testid='blue_bar_profile_link']");
+    window.global.profileInfo = $("#pagelet_bluebar a[title='Profil']");
+    // window.global.profileInfo = $("#fb2k_pagelet_bluebar a[data-testid='blue_bar_profile_link']");
+    // window.global.profileInfo = $("#u_0_6 > div > div > div._2btk > div > div._9t5._398f > div._4qx3 > div > a");
+    console.log(window.global.profileInfo);
+    // if (true) { 
     if (window.global.profileInfo.length > 0) {
         // this is the beginning, bg only starts tracking
         // if profle img / logged in
